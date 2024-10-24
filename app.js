@@ -20,8 +20,26 @@ console.log(`7. Замена "клён" на "дуб" (все вхождения
 console.log(`8. Индекс первого вхождения "моря": ${index}`);
 console.log(`9. Строка с измененной первой буквой: ${modifiedText}`);
 
+// Задание 3
 
+const alphabet = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя';
 
+function getRandomIntInclusive(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1) + min);
+ // Максимум и минимум включаются
+}
+
+const letterOne = alphabet[getRandomIntInclusive (0, (alphabet.length-1))];
+const letterTwo = alphabet[getRandomIntInclusive (0, (alphabet.length-1))];
+const letterThree = alphabet[getRandomIntInclusive (0, (alphabet.length-1))];
+const letterFour = alphabet[getRandomIntInclusive (0, (alphabet.length-1))];
+
+const word = letterOne+letterTwo+letterThree+letterFour;
+
+const newWord = document.getElementById('random');
+newWord.textContent = word;
 
 
 
