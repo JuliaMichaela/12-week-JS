@@ -1,4 +1,5 @@
 // Задание 2
+
 const text = "у лукоморья клён зелёный; златая цепь на клён том; и днём и ночью кот учёный; всё ходит по цепи кругом; идёт направо — песнь заводит; налево — сказку говорит; там чудеса: там леший бродит; русалка на ветвях сидит; там на неведомых дорожках; следы невиданных зверей; избушка там на курьих ножках; стоит без окон, без дверей; там лес и дол видений полны; там о заре прихлынут волны; на брег песчаный и пустой; и тридцать витязей прекрасных; чредой из вод выходят ясных; и с ними дядька их морской; там королевич мимоходом; пленяет грозного царя; там в облаках перед народом; через леса, через моря; колдун несёт богатыря; в темнице там царевна тужит; а бурый волк ей верно служит; там ступа с бабою ягой; идёт, бредёт сама собой; там царь кащей над златом чахнет; там русский дух… там русью пахнет!; и там я был, и мёд я пил; у моря видел клён зелёный; под ним сидел, и кот учёный; свои мне сказки говорил."
 
 const result = text.replaceAll( ";", ';\n');
@@ -22,24 +23,32 @@ console.log(`9. Строка с измененной первой буквой: 
 
 // Задание 3
 
-const alphabet = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя';
+function wordGenerator (){
 
-function getRandomIntInclusive(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1) + min);
- // Максимум и минимум включаются
+    const alphabet = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя';
+
+    function getRandomIntInclusive(min, max) {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max - min + 1) + min);
+    // Максимум и минимум включаются
+    }
+
+    const letterOne = alphabet[getRandomIntInclusive (0, (alphabet.length-1))];
+    const letterTwo = alphabet[getRandomIntInclusive (0, (alphabet.length-1))];
+    const letterThree = alphabet[getRandomIntInclusive (0, (alphabet.length-1))];
+    const letterFour = alphabet[getRandomIntInclusive (0, (alphabet.length-1))];
+
+    const word = letterOne+letterTwo+letterThree+letterFour;
+
+    const newWord = document.getElementById('random');
+    newWord.textContent = word;
 }
 
-const letterOne = alphabet[getRandomIntInclusive (0, (alphabet.length-1))];
-const letterTwo = alphabet[getRandomIntInclusive (0, (alphabet.length-1))];
-const letterThree = alphabet[getRandomIntInclusive (0, (alphabet.length-1))];
-const letterFour = alphabet[getRandomIntInclusive (0, (alphabet.length-1))];
+const btn = document.getElementById('btn');
+btn.addEventListener ('click', wordGenerator);
 
-const word = letterOne+letterTwo+letterThree+letterFour;
 
-const newWord = document.getElementById('random');
-newWord.textContent = word;
 
 
 

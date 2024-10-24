@@ -1,0 +1,36 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    background-color: #9CBF7A;
+}
+
+.container {
+    font-size: 40px;
+    height: 50px;
+    color:#293065 ;
+}
+
+h1 {
+    font-size: 50px;
+    color:#293065;
+}
+
+button {
+    margin-top: 40px;
+    width: 100px;
+    height: 35px;
+    border-radius: 10px;
+    background-color: #293065;
+    color: #9CBF7A;
+    border: none;
+    box-shadow: inset;
+}
