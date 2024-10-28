@@ -23,7 +23,7 @@ console.log(`9. Строка с измененной первой буквой: 
 
 // Задание 3
 
-function wordGenerator (){
+function generateWord (){
 
     const alphabet = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя';
 
@@ -46,7 +46,7 @@ function wordGenerator (){
 }
 
 const btn = document.getElementById('btn');
-btn.addEventListener ('click', wordGenerator);
+btn.addEventListener ('click', generateWord);
 
 
 
